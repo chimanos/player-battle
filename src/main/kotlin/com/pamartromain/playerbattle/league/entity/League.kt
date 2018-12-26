@@ -1,4 +1,6 @@
 package com.pamartromain.playerbattle.league.entity
 
-class League {
-}
+import org.springframework.data.mongodb.core.mapping.Document
+
+@Document
+class League(val name: String)

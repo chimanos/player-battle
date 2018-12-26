@@ -1,4 +1,6 @@
 package com.pamartromain.playerbattle.character.entity
 
-class Character {
-}
+import org.springframework.data.mongodb.core.mapping.Document
+
+@Document
+class Character(val name: String, val score: Int)
