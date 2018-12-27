@@ -15,7 +15,7 @@ class PlayerService {
     private lateinit var playerDAO: PlayerDAO
 
     fun addPlayer(loginBody: LoginBody) {
-        val player = Player("${loginBody.login}${UUID.randomUUID().variant()}", loginBody.login, loginBody.password, 10000, null, null)
+        val player = Player("${loginBody.login}${UUID.randomUUID()}", loginBody.login, loginBody.password, 10000, null, null)
         playerDAO.addPlayer(player)
     }
 
