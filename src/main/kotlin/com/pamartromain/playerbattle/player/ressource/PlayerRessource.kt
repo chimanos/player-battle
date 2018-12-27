@@ -16,7 +16,7 @@ class PlayerRessource {
     private lateinit var playerService: PlayerService
 
     @PostMapping()
-    fun addPlayer(@RequestBody player: Player) = playerService.addPlayer(player)
+    fun addPlayer(@RequestBody loginBody: LoginBody) = playerService.addPlayer(loginBody)
 
     @PutMapping
     fun updatePlayer(@RequestBody player: Player) = playerService.updatePlayer(player)
