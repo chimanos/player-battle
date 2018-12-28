@@ -12,11 +12,11 @@ import org.springframework.data.mongodb.core.SimpleMongoDbFactory
 class MongoConfig {
 
     private fun mongo(): SimpleMongoDbFactory {
-        val serverAddress = ServerAddress("localhost", 27017)
+        val serverAddress = ServerAddress("morty.ovh", 27017)
         val mongoClientOptions = MongoClientOptions.builder()
         val mongoClient = MongoClient(serverAddress, mongoClientOptions.build())
 
-        return SimpleMongoDbFactory(mongoClient, "droidtest")
+        return SimpleMongoDbFactory(mongoClient, "playerbattle")
     }
 
     @Bean()
